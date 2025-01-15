@@ -1,45 +1,100 @@
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
     background-color: #DFDFD7;
     color: #333333;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #DF5700;
-    padding: 10px 20px;
+    padding: 20px 40px;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin-left: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-section {
-    padding: 40px 20px;
+nav ul li a:hover {
+    color: #333333;
+}
+
+/* Welcome Section */
+#welcome {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #FFF;
+}
+
+#welcome h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #DF5700;
+}
+
+/* About Section */
+#about {
+    padding: 60px 40px;
+    background-color: #F8F8F8;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 #about p {
-    margin: 15px 0;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Works Section */
+#works {
+    padding: 60px 40px;
+    background-color: #FFF;
+}
+
+#works h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 40px;
 }
 
 .gallery {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 
 .category {
@@ -50,6 +105,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .images {
@@ -60,28 +116,47 @@ section {
 
 .image {
     min-width: 300px;
+    height: 200px;
     background-color: #333333;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    font-weight: bold;
 }
 
 button.prev, button.next {
-    background-color: transparent;
+    background: none;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     color: #DF5700;
 }
 
+/* Contact Section */
+#contacts {
+    padding: 60px 40px;
+    background-color: #F8F8F8;
+}
+
+#contacts h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contacts p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 #contact-form {
+    max-width: 500px;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
+    gap: 15px;
 }
 
 #contact-form label {
@@ -93,15 +168,17 @@ button.prev, button.next {
     padding: 10px;
     border: 1px solid #333333;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 #contact-form button {
     background-color: #DF5700;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
