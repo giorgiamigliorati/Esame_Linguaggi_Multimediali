@@ -1,9 +1,8 @@
 // Custom cursor functionality
 const cursor = document.createElement('div');
-cursor.style.width = '20px';
-cursor.style.height = '20px';
+cursor.style.width = '40px';
+cursor.style.height = '40px';
 cursor.style.backgroundColor = '#DF5700';
-cursor.style.border = '2px solid #333333';
 cursor.style.borderRadius = '50%';
 cursor.style.position = 'absolute';
 cursor.style.pointerEvents = 'none';

@@ -3,7 +3,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #DFDFD7;
     color: #333333;
-    overflow-x: hidden;
 }
 
 header {
@@ -13,6 +12,8 @@ header {
 }
 
 .logo {
+    text-align: right;
+    margin-right: 20px;
     font-size: 6em;
     font-weight: bold;;
 }
@@ -20,19 +21,18 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    margin: 0;
     padding: 0;
 }
 
 nav ul li {
+    margin-top: 20PX;
+    text-align: left;
     margin-left: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #DF5700;
+    color: #333333;
     font-weight: bold;
-    transition: color 0.3s;
     font-size: 2em;
 }
 
