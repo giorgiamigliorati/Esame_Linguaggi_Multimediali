@@ -1,10 +1,10 @@
 // Custom cursor functionality
 const cursor = document.createElement('div');
-cursor.style.width = '40px';
-cursor.style.height = '40px';
+cursor.style.width = '60px';
+cursor.style.height = '60px';
 cursor.style.backgroundColor = '#DF5700';
-cursor.style.opacity= '0.5';
-cursor.style.outlineWidth = '5px';
+cursor.style.opacity= '0.6';
+cursor.style.outlineWidth = '10px';
 cursor.style.borderRadius = '100%';
 cursor.style.position = 'absolute';
 cursor.style.pointerEvents = 'none';
