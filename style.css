@@ -12,16 +12,15 @@ header {
 
 .logo {
     text-align: right;
-    margin-right: 20px;
+    margin-right: 60px;
     font-size: 7em;
     font-weight: bold;
-    text-shadow: 10px 10px 20px rgb(255, 89, 0); /* Ombra in diagonale con opacità 20% */
+    text-shadow: 10px 10px 0px rgb(255, 89, 0);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    padding: 0;
 }
 
 nav ul li {
@@ -34,10 +33,12 @@ nav ul li a {
     color: #5703ffdd;
     font-weight: bold;
     font-size: 2em;
+    text-decoration: none; /* Rimuove la sottolineatura */
 }
 
 nav ul li a:hover {
-    color:#DF5700;
+    color: #DF5700;
+    text-decoration: none; /* Assicura che la sottolineatura resti rimossa anche al passaggio del mouse */
 }
 
 #welcome {
@@ -51,6 +52,7 @@ nav ul li a:hover {
     font-size: 3em;
     font-weight: bold;
     color: #DF5700;
+    text-shadow: 4px 4px 0px rgb(98, 0, 255);
     margin: 0;
 }
 
@@ -68,6 +70,7 @@ nav ul li a:hover {
 
 #about h2 {
     color: #DF5700;
+    text-shadow: 4px 4px 0px rgb(98, 0, 255);
     font-size: 3em;
     font-weight: bold;
     margin-right: 40px;
@@ -91,6 +94,7 @@ nav ul li a:hover {
 
 #works h2 {
     text-align: center;
+    text-shadow: 4px 4px 0px rgb(98, 0, 255);
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 40px;
@@ -137,6 +141,7 @@ button.prev, button.next {
     font-size: 2.5rem;
     cursor: pointer;
     color: #DF5700;
+    text-shadow: 4px 4px 0px rgb(98, 0, 255);
 }
 
 
@@ -147,6 +152,7 @@ button.prev, button.next {
 
 #contacts h2 {
     color: #DF5700;
+    text-shadow: 4px 4px 0px rgb(98, 0, 255);
     text-align: center;
     font-size: 3em;
     font-weight: bold;
