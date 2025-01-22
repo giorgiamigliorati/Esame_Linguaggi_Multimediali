@@ -8,13 +8,12 @@ body {
 header {
     background-color: #DFDFD7;
     color: #DF5700;
-    z-index: 1000;
 }
 
 .logo {
     text-align: right;
     margin-right: 20px;
-    font-size: 6em;
+    font-size: 7em;
     font-weight: bold;;
 }
 
@@ -25,7 +24,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-top: 20PX;
+    margin-top: 40px;
     text-align: left;
     margin-left: 20px;
 }
@@ -41,8 +40,8 @@ nav ul li a:hover {
 }
 
 #welcome {
-    text-align: right;
-    padding: 150px 20px;
+    text-align: left;
+    margin-left: 40px;
     background-color: #DFDFD7;
     position: relative;
 }
@@ -54,34 +53,37 @@ nav ul li a:hover {
     margin: 0;
 }
 
-
 #about {
-    padding: 80px 40px;
     background-color: #DFDFD7;
+    display: flex;
+    justify-content: flex-end; /* Posiziona tutto verso destra */
 }
 
 .about-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
+    max-width: 600px;
+    margin-left: auto; /* Allinea il contenitore principale a destra */
+    text-align: right; /* Allinea il testo a destra */
 }
 
 #about h2 {
     color: #DF5700;
     font-size: 3em;
     font-weight: bold;
-    margin-bottom: 20px;
-    text-align: right;
+    margin-right: 40px;
+    text-align: right; /* Allinea l'intestazione a destra */
 }
 
 #about p {
-    color: #DF5700;
-    margin-bottom: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+    margin-right: 40px;
     line-height: 1.8;
     font-size: 1.3em;
+    text-align: right; /* Allinea il testo dei paragrafi a destra */
 }
 
 #works {
+    color: #DF5700;
     padding: 80px 40px;
     background-color: #DFDFD7;
 }
