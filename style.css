@@ -7,14 +7,15 @@ body {
 
 header {
     background-color: #DFDFD7;
-    color: #DF5700;
+    color: #5703ffdd;
 }
 
 .logo {
     text-align: right;
     margin-right: 20px;
     font-size: 7em;
-    font-weight: bold;;
+    font-weight: bold;
+    text-shadow: 10px 10px 20px rgb(255, 89, 0); /* Ombra in diagonale con opacità 20% */
 }
 
 nav ul {
@@ -30,7 +31,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333333;
+    color: #5703ffdd;
     font-weight: bold;
     font-size: 2em;
 }
@@ -74,7 +75,7 @@ nav ul li a:hover {
 }
 
 #about p {
-    color: #333333;
+    color: #5703ffdd;
     margin-bottom: 10px;
     margin-right: 40px;
     line-height: 1.8;
@@ -122,9 +123,7 @@ nav ul li a:hover {
 
 .image {
     min-width: 400px;
-    height: 250px;
-    background-color: #333333;
-    color: white;
+    height: 250px;;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,6 +146,7 @@ button.prev, button.next {
 }
 
 #contacts h2 {
+    color: #DF5700;
     text-align: center;
     font-size: 3em;
     font-weight: bold;
@@ -154,7 +154,8 @@ button.prev, button.next {
 }
 
 #contacts p {
-    text-align: center;
+    text-align: center; 
+    color: #5703ffdd;
     margin-bottom: 15px;
     font-size: 1.1em;
 }
@@ -175,7 +176,7 @@ button.prev, button.next {
 #contact-form input, #contact-form textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #333333;
+    border: 1px solid #5703ffdd;
     border-radius: 5px;
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -195,6 +196,6 @@ button.prev, button.next {
 }
 
 #contact-form button:hover {
-    background-color: #333333;
+    background-color: #5703ffdd;
     color: #DF5700;
 }

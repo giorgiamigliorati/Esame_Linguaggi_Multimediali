@@ -3,15 +3,17 @@ const cursor = document.createElement('div');
 cursor.style.width = '40px';
 cursor.style.height = '40px';
 cursor.style.backgroundColor = '#DF5700';
-cursor.style.borderRadius = '50%';
+cursor.style.opacity= '0.5';
+cursor.style.outlineWidth = '5px';
+cursor.style.borderRadius = '100%';
 cursor.style.position = 'absolute';
 cursor.style.pointerEvents = 'none';
 cursor.style.zIndex = '1000';
 document.body.appendChild(cursor);
 
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.pageX - 10}px`;
-    cursor.style.top = `${e.pageY - 10}px`;
+    cursor.style.left = `${e.pageX - 20}px`;
+    cursor.style.top = `${e.pageY - 20}px`;
 });
 
 // Smooth scrolling for navigation
@@ -22,6 +24,20 @@ links.forEach(link => {
         const targetId = link.getAttribute('href').slice(1);
         const targetElement = document.getElementById(targetId);
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+// Text enlargement on hover
+const words = document.querySelectorAll('p, h1, h2, h3 h4, h5, h6, span'); // Target all text elements
+words.forEach(word => {
+    word.style.transition = 'transform 0.2s ease'; // Smooth transition for scaling
+
+    word.addEventListener('mouseover', () => {
+        word.style.transform = 'scale(1.1)'; // Enlarge the text
+    });
+
+    word.addEventListener('mouseout', () => {
+        word.style.transform = 'scale(1)'; // Reset to original size
     });
 });
 
