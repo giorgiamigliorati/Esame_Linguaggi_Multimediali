@@ -41,31 +41,43 @@ words.forEach(word => {
     });
 });
 
-// Image carousel functionality
-const carousels = document.querySelectorAll('.carousel');
-carousels.forEach(carousel => {
-    const imagesContainer = carousel.querySelector('.images');
-    const images = carousel.querySelectorAll('.image');
-    const prevButton = carousel.querySelector('.prev');
-    const nextButton = carousel.querySelector('.next');
+document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.carousel');
 
-    let currentIndex = 0;
-    const imageWidth = images[0].offsetWidth;
+    carousels.forEach(carousel => {
+        const imagesContainer = carousel.querySelector('.images');
+        const images = carousel.querySelectorAll('.image');
+        const prevButton = carousel.querySelector('.prev');
+        const nextButton = carousel.querySelector('.next');
 
-    const updateCarousel = () => {
-        imagesContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-    };
+        let currentIndex = 0;
 
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        updateCarousel();
-    });
+        const updateCarousel = () => {
+            const imageWidth = images[0].clientWidth;
+            imagesContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        };
 
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        const showNextImage = () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        };
+
+        const showPrevImage = () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            updateCarousel();
+        };
+
+        nextButton.addEventListener('click', showNextImage);
+        prevButton.addEventListener('click', showPrevImage);
+
+        // Aggiorna il carosello quando la finestra viene ridimensionata
+        window.addEventListener('resize', updateCarousel);
+
+        // Imposta inizialmente il carosello
         updateCarousel();
     });
 });
+
 
 // Form submission handling
 const form = document.getElementById('contact-form');

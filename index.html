@@ -38,18 +38,8 @@
                     <h3>Photography</h3>
                     <div class="carousel">
                         <button class="prev">&#10094;</button>
-                        <div class="images">
-                            <div class="image"><IMG1 class="jpg"></IMG1></div>
-                            <div class="image"><IMG2 class="jpg"></IMG2></div>
-                            <div class="image"><IMG3 class="jpg"></IMG3></div>
-                            <div class="image"><IMG4 class="jpg"></IMG4></div>
-                            <div class="image"><IMG5 class="jpg"></IMG5></div>
-                            <div class="image"><IMG6 class="jpg"></IMG6></div>
-                            <div class="image"><IMG7 class="jpg"></IMG7></div>
-                            <div class="image"><IMG8 class="jpg"></IMG8></div>
-                            <div class="image"><IMG9 class="jpg"></IMG9></div>
-                            <div class="image"><IMG10 class="jpg"></IMG10></div>
-                            <div class="image"><IMG11 class="jpg"></IMG11></div>
+                        <div class="images" id="photography-images">
+                            <!-- Le immagini verranno caricate dinamicamente qui -->
                         </div>
                         <button class="next">&#10095;</button>
                     </div>
@@ -58,23 +48,43 @@
                     <h3>Drawings</h3>
                     <div class="carousel">
                         <button class="prev">&#10094;</button>
-                        <div class="images">
-                            <div class="image"><IMG12 class="jpg"></IMG12></div>
-                            <div class="image"><IMG13 class="jpg"></IMG13></div>
-                            <div class="image"><IMG14 class="jpg"></IMG14></div>
-                            <div class="image"><IMG15 class="jpg"></IMG15></div>
-                            <div class="image"><IMG16 class="jpg"></IMG16></div>
-                            <div class="image"><IMG17 class="jpg"></IMG17></div>
-                            <div class="image"><IMG18 class="jpg"></IMG18></div>
-                            <div class="image"><IMG19 class="jpg"></IMG19></div>
-                            <div class="image"><IMG20 class="jpg"></IMG20></div>
-                            <div class="image"><IMG21 class="jpg"></IMG21></div>
+                        <div class="images" id="drawings-images">
+                            <!-- Le immagini verranno caricate dinamicamente qui -->
                         </div>
                         <button class="next">&#10095;</button>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <script>
+            // Definizione delle immagini
+            const photographyImages = [
+                "IMG1.jpg", "IMG2.jpg", "IMG3.jpg", "IMG4.jpg", "IMG5.jpg",
+                "IMG6.jpg", "IMG7.jpg", "IMG8.jpg", "IMG9.jpg", "IMG10.jpg", "IMG11.jpg"
+            ];
+            const drawingsImages = [
+                "IMG12.jpg", "IMG13.jpg", "IMG14.jpg", "IMG15.jpg", "IMG16.jpg",
+                "IMG17.jpg", "IMG18.jpg", "IMG19.jpg", "IMG20.jpg", "IMG21.jpg"
+            ];
+        
+            // Funzione per caricare le immagini
+            function loadImages(containerId, images) {
+                const container = document.getElementById(containerId);
+                images.forEach(image => {
+                    const imgElement = document.createElement("img");
+                    imgElement.src = `img/${image}`; // Percorso immagine
+                    imgElement.alt = image; // Testo alternativo
+                    imgElement.classList.add("image");
+                    container.appendChild(imgElement);
+                });
+            }
+        
+            // Carica le immagini nelle rispettive sezioni
+            loadImages("photography-images", photographyImages);
+            loadImages("drawings-images", drawingsImages);
+        </script>
+        
 
         <section id="contacts">
             <h2>CONTACTS</h2>
