@@ -55,7 +55,7 @@ h1{
     width: 70px;
     height: 70px;
     left: 100px; /* Distanza maggiore tra i cerchi */
-    top:200px; /* Posizione regolata per separare meglio i cerchi */
+    top: 150px; /* Posizione regolata per separare meglio i cerchi */
 }
 
 .circle.large {
@@ -82,15 +82,15 @@ h1{
 .circle.extra-small-3 {
     width: 70px;
     height: 70px;
-    left: -100px; /* Più distante del primo cerchio */
+    left: -50px; /* Più distante del primo cerchio */
     top: 1000px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
 }
 
 .circle.extra-small-4 {
     width: 30px;
     height: 30px;
-    left: -10px; /* Più distante del primo cerchio */
-    top: 1200px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+    left: -100px; /* Più distante del primo cerchio */
+    top: 1100px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
 }
 
 /* Animazione pulsante opzionale */
