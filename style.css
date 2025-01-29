@@ -8,6 +8,16 @@ body {
 header {
     background-color: #DFDFD7;
     color: #5703ffdd;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end; /* Posiziona tutto verso destra */
+    align-items: center;
+    padding: 20px;
+}
+
+h1{
+    width: 50%;
+    text-align: right;
 }
 
 .logo {
