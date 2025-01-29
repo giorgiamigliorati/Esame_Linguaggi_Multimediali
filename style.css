@@ -15,15 +15,13 @@ header {
     padding: 20px;
 }
 
-h1{
-    width: 50%;
-    text-align: right;
-}
 
 .logo {
+    width: 70%;
+    text-align: right;
     text-align: right;
     margin-right: 60px;
-    font-size: 7em;
+    font-size: 8vw;
     font-weight: bold;
     text-shadow: 10px 10px 0px rgb(255, 89, 0);
 }
@@ -93,18 +91,19 @@ h1{
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin-top: 40px;
     text-align: left;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: #5703ffdd;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 3.5vw;
     text-decoration: none; /* Rimuove la sottolineatura */
 }
 
@@ -116,7 +115,7 @@ nav ul li a:hover {
 #welcome {
     text-align: left;
     margin-left: 40px;
-    background-color: #DFDFD7;
+    /* background-color: #DFDFD7; */
     position: relative;
     
 }
