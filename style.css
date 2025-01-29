@@ -263,6 +263,8 @@ button.prev, button.next {
 #contact-form label {
     font-weight: bold;
     font-size: 1.1em;
+    text-align: center;
+    color: #5703ffdd;
 }
 
 #contact-form input, #contact-form textarea {
