@@ -12,7 +12,7 @@
           <li><a href="#works">MY WORKS</a></li>
           <li><a href="#contacts">CONTACTS</a></li>
     </ul>
-</nav>
+</nav>  
     <header>
         <h1 class="logo"> GIORGIA <br> MIGLIORATI <br></h1>
         <div class="circle-group">
@@ -65,42 +65,7 @@
         </section>
         
         <script>
-            // Definizione delle immagini
-            const photographyImages = [
-                "IMG1.jpg", "IMG2.jpg", "IMG3.jpg", "IMG4.jpg", "IMG5.jpg",
-                "IMG6.jpg", "IMG7.jpg", "IMG8.jpg", "IMG9.jpg", "IMG10.jpg", "IMG11.jpg"
-            ];
-            const drawingsImages = [
-                "IMG12.jpg", "IMG13.jpg", "IMG14.jpg", "IMG15.jpg", "IMG16.jpg",
-                "IMG17.jpg", "IMG18.jpg", "IMG19.jpg", "IMG20.jpg", "IMG21.jpg"
-            ];
-        
           
-            function loadImages(containerId, images) {
-                const container = document.getElementById(containerId);
-                
-                const viewport = document.createElement("div");
-                viewport.classList.add("viewport");
-                container.appendChild(viewport);
-
-                const wrapper = document.createElement("div");
-                wrapper.classList.add("wrapper");
-                container.appendChild(wrapper);
-                
-
-                
-                images.forEach(image => {
-                    const imgElement = document.createElement("img");
-                    imgElement.src = `img/${image}`; // Percorso immagine
-                    imgElement.alt = image; // Testo alternativo
-                    imgElement.classList.add("image");
-                    wrapper.appendChild(imgElement);
-                });
-            }
-        
-            // Carica le immagini nelle rispettive sezioni
-            loadImages("photography-images", photographyImages);
-            loadImages("drawings-images", drawingsImages);
         </script>
         
 

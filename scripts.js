@@ -47,42 +47,78 @@ words.forEach(word => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const carousels = document.querySelectorAll('.carousel');
 
-    carousels.forEach(carousel => {
-        const imagesContainer = carousel.querySelector('.wrapper');
-        const images = carousel.querySelectorAll('.image');
-        const prevButton = carousel.querySelector('.prev');
-        const nextButton = carousel.querySelector('.next');
+const setupCarousel = (containerId, items) => {
+    const container = document.getElementById(containerId);
+    
+    const viewport = document.createElement("div");
+    viewport.classList.add("viewport");
+    container.appendChild(viewport);
 
-        let currentIndex = 0;
-
-        const updateCarousel = () => {
-            const imageWidth = images[0].clientWidth;
-            imagesContainer.style.transition = 'transform 0.2s ease'; // Add easing
-            imagesContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-        };
-
-        const showNextImage = () => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            updateCarousel();
-        };
-
-        const showPrevImage = () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            updateCarousel();
-        };
-
-        nextButton.addEventListener('click', showNextImage);
-        prevButton.addEventListener('click', showPrevImage);
-
-        // Aggiorna il carosello quando la finestra viene ridimensionata
-        window.addEventListener('resize', updateCarousel);
-
-        // Imposta inizialmente il carosello
-        updateCarousel();
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("wrapper");
+    viewport.appendChild(wrapper);
+    
+    items.forEach(image => {
+        const imgElement = document.createElement("img");
+        imgElement.src = `img/${image}`; // Percorso immagine
+        imgElement.alt = image; // Testo alternativo
+        imgElement.classList.add("image");
+        wrapper.appendChild(imgElement);
     });
+
+    const images = container.querySelectorAll('.image');
+    const prevButton = container.querySelector('.prev');
+    const nextButton = container.querySelector('.next');
+
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+        const imageWidth = images[0].clientWidth;
+        wrapper.style.transition = 'transform 0.2s ease'; // Add easing
+        wrapper.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    };
+
+    const showNextImage = () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    };
+
+    const showPrevImage = () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateCarousel();
+    };
+
+    console.log(container);
+    nextButton.addEventListener('click', showNextImage);
+    prevButton.addEventListener('click', showPrevImage);
+
+    // Aggiorna il carosello quando la finestra viene ridimensionata
+    window.addEventListener('resize', updateCarousel);
+
+    // Imposta inizialmente il carosello
+    updateCarousel();
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Definizione delle immagini
+    const photographyImages = [
+        "IMG1.jpg", "IMG2.jpg", "IMG3.jpg", "IMG4.jpg", "IMG5.jpg",
+        "IMG6.jpg", "IMG7.jpg", "IMG8.jpg", "IMG9.jpg", "IMG10.jpg", "IMG11.jpg"
+    ];
+    const drawingsImages = [
+        "IMG12.jpg", "IMG13.jpg", "IMG14.jpg", "IMG15.jpg", "IMG16.jpg",
+        "IMG17.jpg", "IMG18.jpg", "IMG19.jpg", "IMG20.jpg", "IMG21.jpg"
+    ];
+
+
+    // Carica le immagini nelle rispettive sezioni
+    setupCarousel("photography-images", photographyImages);
+    setupCarousel("drawings-images", drawingsImages);
+
 });
 
 
