@@ -52,17 +52,17 @@ h1{
 }
 
 .circle.medium {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     left: 100px; /* Distanza maggiore tra i cerchi */
-    top: 150px; /* Posizione regolata per separare meglio i cerchi */
+    top: 200px; /* Posizione regolata per separare meglio i cerchi */
 }
 
 .circle.large {
     width: 50px;
     height: 50px;
-    left: 90px; /* Aggiungi un altro sfalsamento */
-    top: 700px;
+    left: 50px; /* Aggiungi un altro sfalsamento */
+    top: 600px;
 }
 
 .circle.extra-small {
@@ -83,13 +83,13 @@ h1{
     width: 70px;
     height: 70px;
     left: -50px; /* Più distante del primo cerchio */
-    top: 1000px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+    top: 900px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
 }
 
 .circle.extra-small-4 {
     width: 30px;
     height: 30px;
-    left: -100px; /* Più distante del primo cerchio */
+    left: 100px; /* Più distante del primo cerchio */
     top: 1100px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
 }
 
