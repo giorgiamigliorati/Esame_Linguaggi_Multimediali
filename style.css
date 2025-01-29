@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #DFDFD7;
-    color: #333333;
 }
 
 header {
@@ -175,7 +174,6 @@ nav ul li a:hover {
 #works {
     color: #DF5700;
     padding: 80px 40px;
-    background-color: #DFDFD7;
 }
 
 #works h2 {
@@ -194,6 +192,7 @@ nav ul li a:hover {
 
 .category {
     text-align: center;
+    font-size: 1em;
 }
 
 .carousel {
@@ -213,7 +212,7 @@ nav ul li a:hover {
 
 .image {
     min-width: 400px;
-    height: 250px;;
+    height: 400px;;
     display: flex;
     align-items: center;
     justify-content: center;
