@@ -12,8 +12,14 @@ cursor.style.zIndex = '1000';
 document.body.appendChild(cursor);
 
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.pageX - 20}px`;
-    cursor.style.top = `${e.pageY - 20}px`;
+    const targetX = e.pageX - 20;
+    const targetY = e.pageY - 20;
+    const distance = Math.sqrt(Math.pow(targetX - cursor.offsetLeft, 2) + Math.pow(targetY - cursor.offsetTop, 2));
+    const scale = Math.min(2, 1 + distance / 100); // Scale factor based on distance, capped at 2x
+    cursor.style.transition = 'left 0.1s ease-out, top 0.1s ease-out, transform 0.1s ease-out';
+    cursor.style.left = `${targetX}px`;
+    cursor.style.top = `${targetY}px`;
+    cursor.style.transform = `scale(${scale})`;
 });
 
 // Smooth scrolling for navigation
@@ -45,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carousels = document.querySelectorAll('.carousel');
 
     carousels.forEach(carousel => {
-        const imagesContainer = carousel.querySelector('.images');
+        const imagesContainer = carousel.querySelector('.wrapper');
         const images = carousel.querySelectorAll('.image');
         const prevButton = carousel.querySelector('.prev');
         const nextButton = carousel.querySelector('.next');
@@ -54,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const updateCarousel = () => {
             const imageWidth = images[0].clientWidth;
+            imagesContainer.style.transition = 'transform 0.2s ease'; // Add easing
             imagesContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
         };
 
