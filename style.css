@@ -38,7 +38,7 @@ h1{
     position: absolute;
     border-radius: 50%;
     background-color: #DF5700;
-    opacity: 0.6; /* Trasparenza per l'effetto */
+    opacity: 1; /* Trasparenza per l'effetto */
     animation: pulse 3s infinite ease-in-out; /* Opzionale per aggiungere un'animazione */
 }
 
@@ -206,7 +206,7 @@ nav ul li a:hover {
     display: flex;
     overflow: hidden;
     width: 400px;
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
