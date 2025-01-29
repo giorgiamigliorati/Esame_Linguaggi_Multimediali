@@ -28,6 +28,68 @@ h1{
     text-shadow: 10px 10px 0px rgb(255, 89, 0);
 }
 
+.circle-group {
+    position: absolute;
+    left: 20%; /* Posizione del gruppo */
+    top: 50%;  /* Regola in base alla posizione desiderata */
+    transform: translate(-70%, -50%);
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #DF5700;
+    opacity: 0.6; /* Trasparenza per l'effetto */
+    animation: pulse 3s infinite ease-in-out; /* Opzionale per aggiungere un'animazione */
+}
+
+/* Cerchi esistenti */
+.circle.small {
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: -30px; /* Posiziona il cerchio in alto rispetto alla posizione di base */
+}
+
+.circle.medium {
+    width: 70px;
+    height: 70px;
+    left: 60px; /* Distanza maggiore tra i cerchi */
+    top: 20px; /* Posizione regolata per separare meglio i cerchi */
+}
+
+.circle.large {
+    width: 50px;
+    height: 50px;
+    left: 130px; /* Aggiungi un altro sfalsamento */
+    top: 0;
+}
+
+/* Nuovi cerchi a sinistra */
+.circle.extra-small {
+    width: 30px;
+    height: 30px;
+    left: -40px; /* Posizione a sinistra del cerchio più a sinistra */
+    top: -50px; /* Posiziona il cerchio in alto per evitare sovrapposizioni */
+}
+
+.circle.extra-small-2 {
+    width: 30px;
+    height: 30px;
+    left: -80px; /* Più distante del primo cerchio */
+    top: 0; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+}
+
+/* Animazione pulsante opzionale */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(3);
+    }
+    50% {
+        transform: scale(1.7);
+    }
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -56,6 +118,7 @@ nav ul li a:hover {
     margin-left: 40px;
     background-color: #DFDFD7;
     position: relative;
+    
 }
 
 #welcome h2 {
@@ -70,6 +133,7 @@ nav ul li a:hover {
     background-color: #DFDFD7;
     display: flex;
     justify-content: flex-end; /* Posiziona tutto verso destra */
+    margin-top: 40px; /* Sposta la sezione più in basso */
 }
 
 .about-container {
