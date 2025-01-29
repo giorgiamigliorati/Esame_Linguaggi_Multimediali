@@ -54,8 +54,8 @@ h1{
 .circle.medium {
     width: 70px;
     height: 70px;
-    left: 200px; /* Distanza maggiore tra i cerchi */
-    top: 20px; /* Posizione regolata per separare meglio i cerchi */
+    left: 100px; /* Distanza maggiore tra i cerchi */
+    top:200px; /* Posizione regolata per separare meglio i cerchi */
 }
 
 .circle.large {
@@ -69,7 +69,7 @@ h1{
     width: 30px;
     height: 30px;
     left: -40px; /* Posizione a sinistra del cerchio più a sinistra */
-    top: -50px; /* Posiziona il cerchio in alto per evitare sovrapposizioni */
+    top: -120px; /* Posiziona il cerchio in alto per evitare sovrapposizioni */
 }
 
 .circle.extra-small-2 {
@@ -129,7 +129,6 @@ nav ul li a:hover {
 #welcome {
     text-align: left;
     margin-left: 40px;
-    background-color: #DFDFD7;
     position: relative;
     
 }
