@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #DFDFD7;
-    color: #333333;
 }
 
 header {
@@ -29,7 +28,7 @@ header {
 .circle-group {
     position: absolute;
     left: 20%; /* Posizione del gruppo */
-    top: 50%;  /* Regola in base alla posizione desiderata */
+    top: 40%;  /* Regola in base alla posizione desiderata */
     transform: translate(-70%, -50%);
 }
 
@@ -37,7 +36,7 @@ header {
     position: absolute;
     border-radius: 50%;
     background-color: #DF5700;
-    opacity: 0.6; /* Trasparenza per l'effetto */
+    opacity: 1; /* Trasparenza per l'effetto */
     animation: pulse 3s infinite ease-in-out; /* Opzionale per aggiungere un'animazione */
 }
 
@@ -45,37 +44,50 @@ header {
 .circle.small {
     width: 50px;
     height: 50px;
-    left: 0;
+    left: 300px;
     top: -30px; /* Posiziona il cerchio in alto rispetto alla posizione di base */
 }
 
 .circle.medium {
-    width: 70px;
-    height: 70px;
-    left: 60px; /* Distanza maggiore tra i cerchi */
-    top: 20px; /* Posizione regolata per separare meglio i cerchi */
+    width: 40px;
+    height: 40px;
+    left: 100px; /* Distanza maggiore tra i cerchi */
+    top: 200px; /* Posizione regolata per separare meglio i cerchi */
 }
 
 .circle.large {
     width: 50px;
     height: 50px;
-    left: 130px; /* Aggiungi un altro sfalsamento */
-    top: 0;
+    left: 50px; /* Aggiungi un altro sfalsamento */
+    top: 600px;
 }
 
-/* Nuovi cerchi a sinistra */
 .circle.extra-small {
     width: 30px;
     height: 30px;
     left: -40px; /* Posizione a sinistra del cerchio più a sinistra */
-    top: -50px; /* Posiziona il cerchio in alto per evitare sovrapposizioni */
+    top: -120px; /* Posiziona il cerchio in alto per evitare sovrapposizioni */
 }
 
 .circle.extra-small-2 {
     width: 30px;
     height: 30px;
-    left: -80px; /* Più distante del primo cerchio */
-    top: 0; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+    left: 200px; /* Più distante del primo cerchio */
+    top: 800px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+}
+
+.circle.extra-small-3 {
+    width: 70px;
+    height: 70px;
+    left: -50px; /* Più distante del primo cerchio */
+    top: 900px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+}
+
+.circle.extra-small-4 {
+    width: 30px;
+    height: 30px;
+    left: 100px; /* Più distante del primo cerchio */
+    top: 1100px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
 }
 
 /* Animazione pulsante opzionale */
@@ -162,7 +174,6 @@ nav ul li a:hover {
 #works {
     color: #DF5700;
     padding: 80px 40px;
-    background-color: #DFDFD7;
 }
 
 #works h2 {
@@ -181,6 +192,7 @@ nav ul li a:hover {
 
 .category {
     text-align: center;
+    font-size: 1em;
 }
 
 .carousel {
@@ -194,7 +206,9 @@ nav ul li a:hover {
 
 .carousel .viewport {    
     display: flex;
-    border-radius: 10px;
+    overflow: hidden;
+    width: 400px;
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 400px;
@@ -210,7 +224,7 @@ nav ul li a:hover {
 
 .image {
     min-width: 400px;
-    height: 250px;;
+    height: 400px;;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,6 +283,8 @@ button.next {
 #contact-form label {
     font-weight: bold;
     font-size: 1.1em;
+    text-align: center;
+    color: #5703ffdd;
 }
 
 #contact-form input, #contact-form textarea {
