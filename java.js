@@ -12,8 +12,14 @@ cursor.style.zIndex = '1000';
 document.body.appendChild(cursor);
 
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.pageX - 20}px`;
-    cursor.style.top = `${e.pageY - 20}px`;
+    const targetX = e.pageX - 20;
+    const targetY = e.pageY - 20;
+    const distance = Math.sqrt(Math.pow(targetX - cursor.offsetLeft, 2) + Math.pow(targetY - cursor.offsetTop, 2));
+    const scale = Math.min(2, 1 + distance / 100); // Scale factor based on distance, capped at 2x
+    cursor.style.transition = 'left 0.1s ease-out, top 0.1s ease-out, transform 0.1s ease-out';
+    cursor.style.left = `${targetX}px`;
+    cursor.style.top = `${targetY}px`;
+    cursor.style.transform = `scale(${scale})`;
 });
 
 // Smooth scrolling for navigation
@@ -41,41 +47,88 @@ words.forEach(word => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const carousels = document.querySelectorAll('.carousel');
 
-    carousels.forEach(carousel => {
-        const imagesContainer = carousel.querySelector('.images');
-        const images = carousel.querySelectorAll('.image');
-        const prevButton = carousel.querySelector('.prev');
-        const nextButton = carousel.querySelector('.next');
+const setupCarousel = (containerId, items) => {
+    const container = document.getElementById(containerId);
+    
 
-        let currentIndex = 0;
 
-        const updateCarousel = () => {
-            const imageWidth = images[0].clientWidth;
-            imagesContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-        };
+    const prevButton = document.createElement("button");
+    prevButton.classList.add("prev");
+    prevButton.innerHTML = "&#10094;";
+    container.appendChild(prevButton);
 
-        const showNextImage = () => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            updateCarousel();
-        };
+    const viewport = document.createElement("div");
+    viewport.classList.add("viewport");
+    container.appendChild(viewport);
 
-        const showPrevImage = () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            updateCarousel();
-        };
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("wrapper");
+    viewport.appendChild(wrapper);
 
-        nextButton.addEventListener('click', showNextImage);
-        prevButton.addEventListener('click', showPrevImage);
-
-        // Aggiorna il carosello quando la finestra viene ridimensionata
-        window.addEventListener('resize', updateCarousel);
-
-        // Imposta inizialmente il carosello
-        updateCarousel();
+    const nextButton = document.createElement("button");
+    nextButton.classList.add("next");
+    nextButton.innerHTML = "&#10095;";
+    container.appendChild(nextButton);
+    
+    items.forEach(image => {
+        const imgElement = document.createElement("img");
+        imgElement.src = `img/${image}`; // Percorso immagine
+        imgElement.alt = image; // Testo alternativo
+        imgElement.classList.add("image");
+        wrapper.appendChild(imgElement);
     });
+
+    const images = container.querySelectorAll('.image');
+
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+        const imageWidth = images[0].clientWidth;
+        wrapper.style.transition = 'transform 0.2s ease'; // Add easing
+        wrapper.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        console.log(container.id, "currentIndex", currentIndex);
+    };
+
+    const showNextImage = () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    };
+
+    const showPrevImage = () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateCarousel();
+    };
+
+    nextButton.addEventListener('click', showNextImage);
+    prevButton.addEventListener('click', showPrevImage);
+
+    // Aggiorna il carosello quando la finestra viene ridimensionata
+    window.addEventListener('resize', updateCarousel);
+
+    // Imposta inizialmente il carosello
+    updateCarousel();
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Definizione delle immagini
+    const photographyImages = [
+        "IMG1.jpg", "IMG2.jpg", "IMG3.jpg", "IMG4.jpg", "IMG5.jpg",
+        "IMG6.jpg", "IMG7.jpg", "IMG8.jpg", "IMG9.jpg", "IMG10.jpg", "IMG11.jpg"
+    ];
+    const drawingsImages = [
+        "IMG12.jpg", "IMG13.jpg", "IMG14.jpg", "IMG15.jpg", "IMG16.jpg",
+        "IMG17.jpg", "IMG18.jpg", "IMG19.jpg", "IMG20.jpg", "IMG21.jpg"
+    ];
+
+
+    // Carica le immagini nelle rispettive sezioni
+    setupCarousel("photography-images", photographyImages);
+    setupCarousel("drawings-images", drawingsImages);
+
 });
 
 
