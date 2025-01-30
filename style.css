@@ -200,8 +200,6 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    position: relative;
-    border: 2px solid red;
 }
 
 .carousel .viewport {    
@@ -212,8 +210,9 @@ nav ul li a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 400px;
-    /* border: 10px solid green */
 }
+
+
 
 
 .carousel .wrapper {
@@ -240,7 +239,6 @@ button.prev, button.next {
     color: #DF5700;
     text-shadow: 4px 4px 0px rgb(98, 0, 255);
     z-index: 1;
-    position: absolute;
 }
 
 button.prev {
@@ -312,4 +310,18 @@ button.next {
 #contact-form button:hover {
     background-color: #5703ffdd;
     color: #DF5700;
+}
+
+
+/* 
+    debug
+    add debug class to body to see the borders
+*/
+body.debug {
+    .carousel {
+        border: 5px solid red;
+        .viewport {
+            border: 5px solid green;
+        }
+    }
 }
