@@ -51,6 +51,13 @@ words.forEach(word => {
 const setupCarousel = (containerId, items) => {
     const container = document.getElementById(containerId);
     
+
+
+    const prevButton = document.createElement("button");
+    prevButton.classList.add("prev");
+    prevButton.innerHTML = "&#10094;";
+    container.appendChild(prevButton);
+
     const viewport = document.createElement("div");
     viewport.classList.add("viewport");
     container.appendChild(viewport);
@@ -58,6 +65,11 @@ const setupCarousel = (containerId, items) => {
     const wrapper = document.createElement("div");
     wrapper.classList.add("wrapper");
     viewport.appendChild(wrapper);
+
+    const nextButton = document.createElement("button");
+    nextButton.classList.add("next");
+    nextButton.innerHTML = "&#10095;";
+    container.appendChild(nextButton);
     
     items.forEach(image => {
         const imgElement = document.createElement("img");
@@ -68,8 +80,6 @@ const setupCarousel = (containerId, items) => {
     });
 
     const images = container.querySelectorAll('.image');
-    const prevButton = container.querySelector('.prev');
-    const nextButton = container.querySelector('.next');
 
     let currentIndex = 0;
 
@@ -77,6 +87,7 @@ const setupCarousel = (containerId, items) => {
         const imageWidth = images[0].clientWidth;
         wrapper.style.transition = 'transform 0.2s ease'; // Add easing
         wrapper.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        console.log(container.id, "currentIndex", currentIndex);
     };
 
     const showNextImage = () => {
@@ -89,7 +100,6 @@ const setupCarousel = (containerId, items) => {
         updateCarousel();
     };
 
-    console.log(container);
     nextButton.addEventListener('click', showNextImage);
     prevButton.addEventListener('click', showPrevImage);
 
