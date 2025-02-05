@@ -44,15 +44,15 @@ header {
 .circle.small {
     width: 50px;
     height: 50px;
-    left: 300px;
+    left: 100px;
     top: -30px; /* Posiziona il cerchio in alto rispetto alla posizione di base */
 }
 
 .circle.medium {
     width: 40px;
     height: 40px;
-    left: 100px; /* Distanza maggiore tra i cerchi */
-    top: 200px; /* Posizione regolata per separare meglio i cerchi */
+    left: 0px; /* Distanza maggiore tra i cerchi */
+    top: 300px; /* Posizione regolata per separare meglio i cerchi */
 }
 
 .circle.large {
@@ -65,29 +65,29 @@ header {
 .circle.extra-small {
     width: 30px;
     height: 30px;
-    left: -40px; /* Posizione a sinistra del cerchio più a sinistra */
+    left: -60px; /* Posizione a sinistra del cerchio più a sinistra */
     top: -120px; /* Posiziona il cerchio in alto per evitare sovrapposizioni */
 }
 
 .circle.extra-small-2 {
     width: 30px;
     height: 30px;
-    left: 200px; /* Più distante del primo cerchio */
+    left: -50px; /* Più distante del primo cerchio */
     top: 800px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
 }
 
 .circle.extra-small-3 {
-    width: 70px;
-    height: 70px;
-    left: -50px; /* Più distante del primo cerchio */
+    width: 50px;
+    height: 50px;
+    left: 800px; /* Più distante del primo cerchio */
     top: 900px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
 }
 
 .circle.extra-small-4 {
-    width: 30px;
-    height: 30px;
-    left: 100px; /* Più distante del primo cerchio */
-    top: 1100px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+    width: 20px;
+    height: 20px;
+    left: 0px; /* Più distante del primo cerchio */
+    top: 1300px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
 }
 
 /* Animazione pulsante opzionale */

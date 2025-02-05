@@ -47,11 +47,8 @@ words.forEach(word => {
     });
 });
 
-
 const setupCarousel = (containerId, items) => {
     const container = document.getElementById(containerId);
-    
-
 
     const prevButton = document.createElement("button");
     prevButton.classList.add("prev");
@@ -110,8 +107,6 @@ const setupCarousel = (containerId, items) => {
     updateCarousel();
 }
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // Definizione delle immagini
@@ -123,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "IMG12.jpg", "IMG13.jpg", "IMG14.jpg", "IMG15.jpg", "IMG16.jpg",
         "IMG17.jpg", "IMG18.jpg", "IMG19.jpg", "IMG20.jpg", "IMG21.jpg"
     ];
-
 
     // Carica le immagini nelle rispettive sezioni
     setupCarousel("photography-images", photographyImages);
