@@ -14,7 +14,6 @@ header {
     padding: 20px;
 }
 
-
 .logo {
     width: 70%;
     text-align: right;
@@ -37,60 +36,59 @@ header {
     border-radius: 50%;
     background-color: #DF5700;
     opacity: 1; /* Trasparenza per l'effetto */
-    animation: pulse 3s infinite ease-in-out; /* Opzionale per aggiungere un'animazione */
+    animation: pulse 3s infinite ease-in-out; /* per aggiungere un'animazione */
 }
 
-/* Cerchi esistenti */
 .circle.small {
     width: 50px;
     height: 50px;
     left: 100px;
-    top: -30px; /* Posiziona il cerchio in alto rispetto alla posizione di base */
+    top: -30px; 
 }
 
 .circle.medium {
     width: 40px;
     height: 40px;
-    left: 0px; /* Distanza maggiore tra i cerchi */
-    top: 300px; /* Posizione regolata per separare meglio i cerchi */
+    left: 0px; 
+    top: 300px; 
 }
 
 .circle.large {
     width: 50px;
     height: 50px;
-    left: 50px; /* Aggiungi un altro sfalsamento */
+    left: 50px; 
     top: 600px;
 }
 
 .circle.extra-small {
     width: 30px;
     height: 30px;
-    left: -60px; /* Posizione a sinistra del cerchio più a sinistra */
-    top: -120px; /* Posiziona il cerchio in alto per evitare sovrapposizioni */
+    left: -60px; 
+    top: -120px; 
 }
 
 .circle.extra-small-2 {
     width: 30px;
     height: 30px;
-    left: -50px; /* Più distante del primo cerchio */
-    top: 800px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+    left: -50px; 
+    top: 800px; 
 }
 
 .circle.extra-small-3 {
     width: 50px;
     height: 50px;
-    left: 800px; /* Più distante del primo cerchio */
-    top: 900px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+    left: 800px; 
+    top: 900px; 
 }
 
 .circle.extra-small-4 {
     width: 20px;
     height: 20px;
-    left: 0px; /* Più distante del primo cerchio */
-    top: 1300px; /* Posiziona il cerchio in basso, in modo che si incroci con il cerchio principale */
+    left: 0px; 
+    top: 1300px; 
 }
 
-/* Animazione pulsante opzionale */
+/* Animazione pulsante */
 @keyframes pulse {
     0%, 100% {
         transform: scale(3);
@@ -125,14 +123,12 @@ nav ul li a:hover {
 }
 
 #menu{
-    /* border: solid 1px red; */
     margin-left: 40px;
 }
 
 #welcome {
     text-align: left;
     margin-left: 40px;
-    /* background-color: #DFDFD7; */
     position: relative;
 }
 
@@ -215,9 +211,6 @@ nav ul li a:hover {
     overflow: hidden;
     width: 400px;
 }
-
-
-
 
 .carousel .wrapper {
     display: flex;
@@ -316,11 +309,6 @@ button.next {
     color: #DF5700;
 }
 
-
-/* 
-    debug
-    add debug class to body to see the borders
-*/
 body.debug {
     .carousel {
         border: 5px solid red;
