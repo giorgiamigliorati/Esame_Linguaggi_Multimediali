@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
 // Form submission handling
 const form = document.getElementById('contact-form');
 form.addEventListener('submit', (e) => {
